@@ -6,6 +6,8 @@ import ProjectTasks from "./pages/ProjectTasks";
 import AddProject from "./pages/AddProject";
 import AddTask from "./pages/AddTask";
 import "./App.css";
+import { AddTaskTest } from "./test/TestStateManage";
+// import { createTask } from "./models/task_model";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -33,6 +35,9 @@ function App() {
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
+
+  // createTask({ projectId: "id", title: "title" });
+
 
   return (
     <BrowserRouter>
