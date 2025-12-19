@@ -6,6 +6,8 @@ import ProjectTasks from "./pages/ProjectTasks";
 import AddProject from "./pages/AddProject";
 import AddTask from "./pages/AddTask";
 import "./App.css";
+import { AddTaskTest } from "./test/TestStateManage";
+// import { createTask } from "./models/task_model";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -20,11 +22,15 @@ function App() {
     }
   };
 
+  // createTask({ projectId: "id", title: "title" });
+
+
   return (
     <BrowserRouter>
       <Navbar toggleTheme={toggleTheme} currentTheme={theme} />
       <main>
         <Routes>
+          <Route path="/test" element= {<AddTaskTest />} />
           <Route path="/" element={<Dashboard />} />
           <Route path="/project/:id/:name" element={<ProjectTasks />} />
           <Route path="/add-project" element={<AddProject />} />
